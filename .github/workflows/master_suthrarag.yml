@@ -26,12 +26,12 @@ jobs:
       - name: Zip source for deployment
         run: |
           zip -r release.zip . \
-            --exclude "*.git*" \
-            --exclude "node_modules/*" \
-            --exclude ".next/*" \
-            --exclude "webapp_logs*" \
-            --exclude "*.zip" \
-            --exclude "tmp_deploy/*"
+            -x "*.git*" \
+            -x "node_modules/*" \
+            -x ".next/*" \
+            -x "webapp_logs*" \
+            -x "*.zip" \
+            -x "tmp_deploy/*"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
