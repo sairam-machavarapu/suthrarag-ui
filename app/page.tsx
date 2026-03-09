@@ -1,101 +1,178 @@
-import Image from "next/image";
+'use client';
+
+import { useState, useEffect } from 'react';
+import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
+import Sidebar from '@/components/Sidebar';
+import ChatWindow from '@/components/ChatWindow';
+import ProfilePanel from '@/components/ProfilePanel';
+import { ChatMessage, TokenUsage, Conversation } from '@/types/rag';
+import { Loader2 } from 'lucide-react';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const { data: session, status } = useSession();
+  const router = useRouter();
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [conversations, setConversations] = useState<Conversation[]>([]);
+  const [activeId, setActiveId] = useState<string | null>(null);
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [stats, setStats] = useState({
+    totalRequests: 0,
+    promptTokens: 0,
+    completionTokens: 0,
+    totalTokens: 0,
+    model: 'gpt-4o-mini',
+  });
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+  // Load conversations from local storage
+  useEffect(() => {
+    const saved = localStorage.getItem('suthra_chats');
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        setConversations(parsed);
+      } catch (e) {
+        console.error('Failed to parse conversations', e);
+      }
+    }
+  }, []);
+
+  // Save conversations to local storage
+  useEffect(() => {
+    if (conversations.length > 0) {
+      localStorage.setItem('suthra_chats', JSON.stringify(conversations));
+    }
+  }, [conversations]);
+
+  // Update messages when activeId changes
+  useEffect(() => {
+    if (activeId) {
+      const conv = conversations.find(c => c.id === activeId);
+      if (conv) {
+        setMessages(conv.messages);
+      }
+    } else {
+      setMessages([]);
+    }
+  }, [activeId, conversations]);
+
+  // Update conversation when messages change
+  useEffect(() => {
+    if (messages.length > 0 && activeId) {
+      setConversations(prev => prev.map(c => {
+        if (c.id === activeId) {
+          return {
+            ...c,
+            messages,
+            updatedAt: new Date().toISOString(),
+          };
+        }
+        return c;
+      }));
+    } else if (messages.length > 0 && !activeId) {
+      // New conversation
+      const newId = Date.now().toString();
+      const firstUserMsg = messages.find(m => m.role === 'user');
+      const title = firstUserMsg ? (firstUserMsg.content.slice(0, 30) + (firstUserMsg.content.length > 30 ? '...' : '')) : 'New Chat';
+
+      const newConv: Conversation = {
+        id: newId,
+        title,
+        messages,
+        updatedAt: new Date().toISOString(),
+      };
+
+      setConversations(prev => [newConv, ...prev]);
+      setActiveId(newId);
+    }
+  }, [messages, activeId]);
+
+  useEffect(() => {
+    if (status === 'unauthenticated') {
+      router.push('/auth/signin');
+    }
+  }, [status, router]);
+
+  if (status === 'loading') {
+    return (
+      <div className="flex h-screen items-center justify-center bg-slate-950">
+        <Loader2 className="h-8 w-8 animate-spin text-indigo-500" />
+      </div>
+    );
+  }
+
+  if (!session) return null;
+
+  const handleProfileClick = () => {
+    setIsProfileOpen(true);
+  };
+
+  const handleCloseProfile = () => {
+    setIsProfileOpen(false);
+  };
+
+  const handleNewChat = () => {
+    setActiveId(null);
+    setMessages([]);
+  };
+
+  const handleSelectConversation = (id: string) => {
+    setActiveId(id);
+  };
+
+  const handleDeleteConversation = (id: string) => {
+    setConversations(prev => prev.filter(c => c.id !== id));
+    if (activeId === id) {
+      handleNewChat();
+    }
+  };
+
+  const handleTokenUsageUpdate = (usage: TokenUsage) => {
+    setStats(prev => ({
+      totalRequests: prev.totalRequests + 1,
+      promptTokens: prev.promptTokens + usage.prompt_tokens,
+      completionTokens: prev.completionTokens + usage.completion_tokens,
+      totalTokens: prev.totalTokens + usage.total_tokens,
+      model: usage.model,
+    }));
+  };
+
+  return (
+    <div className="flex h-screen bg-slate-950 overflow-hidden font-sans">
+      {/* Sidebar Navigation */}
+      {session.user && (
+        <Sidebar
+          onProfileClick={handleProfileClick}
+          onNewChat={handleNewChat}
+          user={session.user as any}
+          conversations={conversations}
+          activeId={activeId || ''}
+          onSelectConversation={handleSelectConversation}
+          onDeleteConversation={handleDeleteConversation}
+        />
+      )}
+
+      {/* Main Chat Interface */}
+      <ChatWindow
+        onTokenUsageUpdate={handleTokenUsageUpdate}
+        messages={messages}
+        setMessages={setMessages}
+      />
+
+      {/* User Profile Panel Overlay */}
+      <ProfilePanel
+        isOpen={isProfileOpen}
+        onClose={handleCloseProfile}
+        stats={stats}
+      />
+
+      {/* Overlay for clicking out of profile panel */}
+      {isProfileOpen && (
+        <div
+          className="fixed inset-0 bg-black/40 z-40 backdrop-blur-sm transition-opacity"
+          onClick={handleCloseProfile}
+        />
+      )}
     </div>
   );
 }
