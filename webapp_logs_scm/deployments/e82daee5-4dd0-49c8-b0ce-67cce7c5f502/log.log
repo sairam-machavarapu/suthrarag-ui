@@ -1,0 +1,117 @@
+2026-03-09T07:08:38.8651091Z,Updating submodules.,849eee9d-9e44-450f-99a0-7d1e11dc7a62,0
+2026-03-09T07:08:39.9891483Z,Preparing deployment for commit id 'e82daee5-4'.,601cf21c-ee70-4444-8046-5bb25726728f,0
+2026-03-09T07:08:40.3450408Z,PreDeployment: context.CleanOutputPath False,fd41d999-6132-4d3a-a765-b71e4f5e4c6d,0
+2026-03-09T07:08:40.5159917Z,PreDeployment: context.OutputPath /home/site/wwwroot,802bddae-54b8-481c-9b98-d11bad76e377,0
+2026-03-09T07:08:40.7237165Z,Repository path is /tmp/zipdeploy/extracted,c03c7225-2cd9-4a2b-8f9e-093e6665d714,0
+2026-03-09T07:08:41.1990198Z,Running oryx build...,20d98471-3b8a-4486-97df-77657cc1eddf,0
+	2026-03-09T07:08:41.2069318Z,Command: oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform nodejs --platform-version 20 -p virtualenv_name= --log-file /tmp/build-debug.log  -i /tmp/8de7daab10f4d8d -p compress_node_modules=tar-gz | tee /tmp/oryx-build.log,,0
+	2026-03-09T07:08:44.7006656Z,Operation performed by Microsoft Oryx&comma; https://github.com/Microsoft/Oryx,,0
+	2026-03-09T07:08:44.7306240Z,You can report issues at https://github.com/Microsoft/Oryx/issues,,0
+	2026-03-09T07:08:44.8204756Z,,,0
+	2026-03-09T07:08:44.8901240Z,Oryx Version: 0.2.20260204.1+0fdbe200b286be083841ff7fa201c6c2316dc6b9&comma; Commit: 0fdbe200b286be083841ff7fa201c6c2316dc6b9&comma; ReleaseTagName: 20260204.1,,0
+	2026-03-09T07:08:44.9806951Z,,,0
+	2026-03-09T07:08:45.0805334Z,Build Operation ID: a3a5e4dc7ef613fd,,0
+	2026-03-09T07:08:45.1364613Z,Repository Commit : e82daee5-4dd0-49c8-b0ce-67cce7c5f502,,0
+	2026-03-09T07:08:45.1846326Z,OS Type           : bookworm,,0
+	2026-03-09T07:08:45.2384112Z,Image Type        : githubactions,,0
+	2026-03-09T07:08:45.3095987Z,,,0
+	2026-03-09T07:08:45.3362515Z,Primary SDK Storage URL: https://oryx-cdn.microsoft.io,,0
+	2026-03-09T07:08:45.3653984Z,Backup SDK Storage URL: ,,0
+	2026-03-09T07:08:45.4171628Z,Detecting platforms...,,0
+	2026-03-09T07:08:45.4458382Z,External SDK provider is enabled.,,0
+	2026-03-09T07:08:45.9310690Z,Requesting metadata for platform nodejs from external SDK provider,,0
+	2026-03-09T07:08:47.8973521Z,Requesting metadata for platform nodejs from external SDK provider,,0
+	2026-03-09T07:08:48.4911142Z,Successfully requested blob for platform nodejs&comma; blobName defaultVersion.bookworm.txt&comma; available at /var/OryxSdks/nodejs/defaultVersion.bookworm.txt,,0
+	2026-03-09T07:08:49.0345232Z,Detected following platforms:,,0
+	2026-03-09T07:08:49.0939577Z,  nodejs: 20.20.0,,0
+	2026-03-09T07:08:49.1228188Z,Requesting metadata for platform nodejs from external SDK provider,,0
+	2026-03-09T07:08:54.4040355Z,Successfully requested blob for platform nodejs&comma; blobName nodejs-bookworm-20.20.0.tar.gz&comma; available at /var/OryxSdks/nodejs/nodejs-bookworm-20.20.0.tar.gz,,0
+	2026-03-09T07:08:55.1656923Z,Version '20.20.0' of platform 'nodejs' is not installed. Generating script to install it...,,0
+	2026-03-09T07:08:55.3269559Z,Detected the following frameworks: Typescript&comma;Next.js,,0
+	2026-03-09T07:08:55.8159870Z,,,0
+	2026-03-09T07:08:55.9159019Z,Using intermediate directory '/tmp/8de7daab10f4d8d'.,,0
+	2026-03-09T07:08:55.9350622Z,,,0
+	2026-03-09T07:08:55.9764889Z,Copying files to the intermediate directory...,,0
+	2026-03-09T07:08:56.0563133Z,Copying files to intermediate directory done in 1 sec(s).,,0
+	2026-03-09T07:08:56.0786100Z,,,0
+	2026-03-09T07:08:56.1182084Z,Source directory     : /tmp/8de7daab10f4d8d,,0
+	2026-03-09T07:08:56.1377501Z,Destination directory: /home/site/wwwroot,,0
+	2026-03-09T07:08:56.1681546Z,,,0
+	2026-03-09T07:08:56.1973067Z,Installing platform...,,0
+	2026-03-09T07:08:56.2384010Z,,,0
+	2026-03-09T07:08:56.2777435Z,Downloading and extracting 'nodejs' version '20.20.0' to '/tmp/oryx/platforms/nodejs/20.20.0'...,,0
+	2026-03-09T07:08:56.3164798Z,Detected image debian flavor: bookworm.,,0
+	2026-03-09T07:08:56.3658209Z,Skipping download of nodejs version 20.20.0 as it is available in external sdk provider cache...,,0
+	2026-03-09T07:08:56.3958326Z,Extracting contents...,,0
+	2026-03-09T07:09:08.2773836Z,Successfully extracted nodejs version 20.20.0 from external sdk provider cache...,,0
+	2026-03-09T07:09:08.3256648Z,,,0
+	2026-03-09T07:09:08.3743030Z,Platform installation done in 12 sec(s).,,0
+	2026-03-09T07:09:08.6907433Z,Running build script snippets...,,0
+	2026-03-09T07:09:08.7207246Z,Removing existing manifest file,,0
+	2026-03-09T07:09:08.7699852Z,Creating directory for command manifest file if it does not exist,,0
+	2026-03-09T07:09:08.8099892Z,Creating a manifest file...,,0
+	2026-03-09T07:09:08.8496425Z,Node Build Command Manifest file created.,,0
+	2026-03-09T07:09:08.8799534Z,,,0
+	2026-03-09T07:09:08.9013001Z,Using Node version:,,0
+	2026-03-09T07:09:09.0730810Z,v20.20.0,,0
+	2026-03-09T07:09:09.1055882Z,,,0
+	2026-03-09T07:09:09.1468538Z,Using Npm version:,,0
+	2026-03-09T07:09:10.5055135Z,10.8.2,,0
+	2026-03-09T07:09:10.5667256Z,,,0
+	2026-03-09T07:09:10.5947563Z,Running 'npm install'...,,0
+	2026-03-09T07:09:10.6256958Z,,,0
+	2026-03-09T07:09:49.5113691Z,npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported,,1
+	2026-03-09T07:09:52.5860212Z,npm warn deprecated inflight@1.0.6: This module is not supported&comma; and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value&comma; which is much more comprehensive and powerful.,,1
+	2026-03-09T07:10:00.2533845Z,npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead,,1
+	2026-03-09T07:10:00.6482546Z,npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead,,1
+	2026-03-09T07:10:02.7795777Z,npm warn deprecated glob@7.2.3: Old versions of glob are not supported&comma; and contain widely publicized security vulnerabilities&comma; which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me,,1
+	2026-03-09T07:10:15.0697181Z,npm warn deprecated glob@10.3.10: Old versions of glob are not supported&comma; and contain widely publicized security vulnerabilities&comma; which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me,,1
+	2026-03-09T07:10:26.7832880Z,npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.,,1
+	2026-03-09T07:12:18.6463443Z,,,0
+	2026-03-09T07:12:18.8334764Z,added 400 packages&comma; and audited 401 packages in 3m,,0
+	2026-03-09T07:12:19.0538233Z,,,0
+	2026-03-09T07:12:19.2237879Z,155 packages are looking for funding,,0
+	2026-03-09T07:12:19.2548104Z,  run `npm fund` for details,,0
+	2026-03-09T07:12:21.0980922Z,,,0
+	2026-03-09T07:12:21.1487996Z,4 high severity vulnerabilities,,0
+	2026-03-09T07:12:21.1941908Z,,,0
+	2026-03-09T07:12:21.2850161Z,To address all issues (including breaking changes)&comma; run:,,0
+	2026-03-09T07:12:21.3317206Z,  npm audit fix --force,,0
+	2026-03-09T07:12:21.3837221Z,,,0
+	2026-03-09T07:12:21.4289934Z,Run `npm audit` for details.,,0
+	2026-03-09T07:12:21.4602540Z,npm notice,,1
+	2026-03-09T07:12:21.5581963Z,npm notice New major version of npm available! 10.8.2 -> 11.11.0,,1
+	2026-03-09T07:12:21.5800046Z,npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.11.0,,1
+	2026-03-09T07:12:21.6775354Z,npm notice To update run: npm install -g npm@11.11.0,,1
+	2026-03-09T07:12:21.7767084Z,npm notice,,1
+	2026-03-09T07:12:21.8989563Z,,,0
+	2026-03-09T07:12:22.0052491Z,Running 'npm run build'...,,0
+	2026-03-09T07:12:22.2145780Z,,,0
+	2026-03-09T07:12:27.0473810Z,,,0
+	2026-03-09T07:12:27.1859836Z,> ui@0.1.0 build,,0
+	2026-03-09T07:12:27.2473068Z,> next build,,0
+	2026-03-09T07:12:27.4132151Z,,,0
+	2026-03-09T07:12:39.0873669Z,Attention: Next.js now collects completely anonymous telemetry regarding usage.,,0
+	2026-03-09T07:12:39.1777893Z,This information is used to shape Next.js' roadmap and prioritize features.,,0
+	2026-03-09T07:12:39.2466663Z,You can learn more&comma; including how to opt-out if you'd not like to participate in this anonymous program&comma; by visiting the following URL:,,0
+	2026-03-09T07:12:39.3662638Z,https://nextjs.org/telemetry,,0
+	2026-03-09T07:12:39.4430833Z,,,0
+	2026-03-09T07:12:39.7373642Z,,,1
+	2026-03-09T07:12:39.7600746Z,> Build error occurred,,1
+	2026-03-09T07:12:39.8076587Z,Error: > Couldn't find any `pages` or `app` directory. Please create one under the project root,,1
+	2026-03-09T07:12:39.8666697Z,    at findPagesDir (/tmp/8de7daab10f4d8d/node_modules/next/dist/lib/find-pages-dir.js:42:15),,1
+	2026-03-09T07:12:39.9261817Z,    at /tmp/8de7daab10f4d8d/node_modules/next/dist/build/index.js:406:73,,1
+	2026-03-09T07:12:40.0066273Z,    at async Span.traceAsyncFn (/tmp/8de7daab10f4d8d/node_modules/next/dist/trace/trace.js:154:20),,1
+	2026-03-09T07:12:40.0269181Z,    at async build (/tmp/8de7daab10f4d8d/node_modules/next/dist/build/index.js:368:9),,1
+	2026-03-09T07:12:42.9253251Z,npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported\nnpm warn deprecated inflight@1.0.6: This module is not supported&comma; and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value&comma; which is much more comprehensive and powerful.\nnpm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead\nnpm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead\nnpm warn deprecated glob@7.2.3: Old versions of glob are not supported&comma; and contain widely publicized security vulnerabilities&comma; which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me\nnpm warn deprecated glob@10.3.10: Old versions of glob are not supported&comma; and contain widely publicized security vulnerabilities&comma; which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me\nnpm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.\nnpm notice\nnpm notice New major version of npm available! 10.8.2 -> 11.11.0\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v11.11.0\nnpm notice To update run: npm install -g npm@11.11.0\nnpm notice\n\n> Build error occurred\nError: > Couldn't find any `pages` or `app` directory. Please create one under the project root\n    at findPagesDir (/tmp/8de7daab10f4d8d/node_modules/next/dist/lib/find-pages-dir.js:42:15)\n    at /tmp/8de7daab10f4d8d/node_modules/next/dist/build/index.js:406:73\n    at async Span.traceAsyncFn (/tmp/8de7daab10f4d8d/node_modules/next/dist/trace/trace.js:154:20)\n    at async build (/tmp/8de7daab10f4d8d/node_modules/next/dist/build/index.js:368:9)\n/bin/bash -c "oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform nodejs --platform-version 20 -p virtualenv_name= --log-file /tmp/build-debug.log  -i /tmp/8de7daab10f4d8d -p compress_node_modules=tar-gz | tee /tmp/oryx-build.log ; exit $PIPESTATUS ",,2
+2026-03-09T07:12:43.6030939Z,,64150781-85c6-458c-8fc2-189c1a8025d2,0
+2026-03-09T07:12:43.8191428Z,Generating summary of Oryx build,79802048-b2a2-4a07-a35b-19ba5c4435a0,0
+2026-03-09T07:12:44.3398392Z,Parsing the build logs,aab81a1a-43a7-4664-a52c-11d158ec5293,0
+2026-03-09T07:12:44.5588011Z,Found 0 issue(s),b1d682ab-aad9-4655-a405-52212f1d084c,0
+2026-03-09T07:12:44.8137883Z,,91a2f430-8475-45e7-9f33-c0d5891eb412,0
+2026-03-09T07:12:45.0877534Z,Build Summary :,fc97835c-7453-4acb-9789-d2ff3da859c6,0
+2026-03-09T07:12:45.3318293Z,===============,66538410-b294-43ad-851b-3f2e92d225a8,0
+2026-03-09T07:12:45.5098060Z,Errors (0),284d3c36-1394-4c0a-8c31-c3885caf7809,0
+2026-03-09T07:12:45.6871453Z,Warnings (0),2b9314b8-f7ad-47ba-9150-d7d3305d022a,0
+2026-03-09T07:12:45.8776440Z,,872983ff-5236-44d2-80e8-29b7c976b4ae,0
+2026-03-09T07:12:46.7295635Z,Deployment Failed. deployer = Push-Deployer deploymentPath = ZipDeploy. Extract zip. Remote build.,ed2f5c04-7d1f-46ea-a07f-13f39fa35849,0

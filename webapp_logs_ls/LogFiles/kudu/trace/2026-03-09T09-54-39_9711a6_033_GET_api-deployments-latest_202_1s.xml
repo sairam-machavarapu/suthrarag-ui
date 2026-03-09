@@ -1,0 +1,9 @@
+<step title="Incoming Request" date="2026-03-09T09:54:39.297" instance="9711a6" url="/api/deployments/latest?deployer=OneDeploy&amp;time=2026-03-09_09-49-02Z" method="GET" type="request" pid="839,1,18" Host="suthrarag-afgjc7gdfjcwfvb2.scm.swedencentral-01.azurewebsites.net" User-Agent="GITHUBACTIONS_DeployWebAppToAzure_07dbaf5baf2512343ab7e187182818a8697183be2e65da8580118d87e819e333_v3.0.7" Authorization="Bea..." Content-Type="application/json; charset=utf-8" Cookie="ARRAffinity=9711a68cc7f143bc7f189183e8636b301249550d2182a6a3ee339ae9bbd55d70; ARRAffinitySameSite=9711a68cc7f143bc7f189183e8636b301249550d2182a6a3ee339ae9bbd55d70" Content-Length="0" X-ARR-LOG-ID="ff14fd5c-2019-492e-be1a-2d961dc78137" CLIENT-IP="172.215.211.51:57405" X-SITE-DEPLOYMENT-ID="suthrarag" WAS-DEFAULT-HOSTNAME="suthrarag-afgjc7gdfjcwfvb2.scm.swedencentral-01.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/api/deployments/latest?deployer=OneDeploy&amp;time=2026-03-09_09-49-02Z" X-Client-IP="172.215.211.51" X-Client-Port="57405" >
+  <step title="Cleanup Xml Logs" date="2026-03-09T09:54:39.307" /><!-- duration: 47ms -->
+  <step title="DeploymentService.GetResult" date="2026-03-09T09:54:39.472" >
+    <step title="DeploymentService.GetLatestDeployment" date="2026-03-09T09:54:39.490" >
+      <step title="DeploymentManager.GetResults" date="2026-03-09T09:54:39.502" /><!-- duration: 519ms -->
+    </step><!-- duration: 550ms -->
+  </step><!-- duration: 589ms -->
+  <step title="Outgoing response" date="2026-03-09T09:54:40.100" type="response" statusCode="202" statusText="Accepted" /><!-- duration: 30ms -->
+</step><!-- duration: 851ms -->

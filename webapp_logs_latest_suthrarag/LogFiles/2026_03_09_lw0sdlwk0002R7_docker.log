@@ -1,0 +1,282 @@
+2026-03-09T09:49:31.4493326Z State: Starting, Action: EstablishingSiteNetworks, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: , DetailsLevel: INFO
+2026-03-09T09:49:34.7244156Z State: Starting, Action: StartingSiteContainers, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: , DetailsLevel: INFO
+2026-03-09T09:49:34.7342128Z Container start method called.
+2026-03-09T09:49:34.7347955Z State: Starting, Action: PullingImage, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Pulling image 10.1.0.4:13209/appsvc/node:20-lts_20260115.4.tuxprod for suthrarag., DetailsLevel: INFO
+2026-03-09T09:49:34.7353396Z Establishing network.
+2026-03-09T09:49:34.7358468Z Pulling image: appsvc/node:20-lts_20260115.4.tuxprod.
+2026-03-09T09:49:36.1321096Z Container is starting.
+2026-03-09T09:49:36.1324489Z State: Starting, Action: MountingVolumes, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Mounting volumes for suthrarag., DetailsLevel: INFO
+2026-03-09T09:49:36.1327585Z Establishing user namespace if not established already.
+2026-03-09T09:49:36.1331024Z Establishing network if not established already.
+2026-03-09T09:49:36.1332613Z Mounting volumes.
+2026-03-09T09:49:36.1345182Z Nested mountpoint 
+2026-03-09T09:49:36.1707644Z Nested mountpoint volatile/logs
+2026-03-09T09:49:36.2581552Z Nested mountpoint 
+2026-03-09T09:49:36.2777812Z Nested mountpoint 
+2026-03-09T09:49:36.2788691Z Nested mountpoint 
+2026-03-09T09:49:36.3976024Z Nested mountpoint 
+2026-03-09T09:49:36.4636808Z Nested mountpoint 
+2026-03-09T09:49:39.6123196Z State: Starting, Action: CreatingContainer, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Finished pulling container image and mounting volumes for suthrarag. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-03-09T09:49:39.6201661Z Creating container.
+2026-03-09T09:49:39.6210454Z Creating pipes for streaming container io.
+2026-03-09T09:49:39.6215844Z Creating stdout named pipe at /podr/container/pipe/beba18dcd17e_suthrarag/stdout_21c4ddd5eb124fda861038fdc4faeb9b.
+2026-03-09T09:49:39.6420173Z Successfully created stdout named pipe at: /podr/container/pipe/beba18dcd17e_suthrarag/stdout_21c4ddd5eb124fda861038fdc4faeb9b.
+2026-03-09T09:49:39.6515031Z Opening named pipe /podr/container/pipe/beba18dcd17e_suthrarag/stdout_21c4ddd5eb124fda861038fdc4faeb9b for reading in non-blocking mode.
+2026-03-09T09:49:39.6517692Z Successfully opened named pipe: /podr/container/pipe/beba18dcd17e_suthrarag/stdout_21c4ddd5eb124fda861038fdc4faeb9b.
+2026-03-09T09:49:39.6518916Z Successfully removed non-blocking flag from /podr/container/pipe/beba18dcd17e_suthrarag/stdout_21c4ddd5eb124fda861038fdc4faeb9b.
+2026-03-09T09:49:39.7787331Z Creating stderr named pipe at /podr/container/pipe/beba18dcd17e_suthrarag/stderr_ff5df2d59277404aa8ad6ea33ee21f63.
+2026-03-09T09:49:39.7796456Z Successfully created stderr named pipe at: /podr/container/pipe/beba18dcd17e_suthrarag/stderr_ff5df2d59277404aa8ad6ea33ee21f63.
+2026-03-09T09:49:39.8550790Z Opening named pipe /podr/container/pipe/beba18dcd17e_suthrarag/stderr_ff5df2d59277404aa8ad6ea33ee21f63 for reading in non-blocking mode.
+2026-03-09T09:49:39.8647123Z Successfully opened named pipe: /podr/container/pipe/beba18dcd17e_suthrarag/stderr_ff5df2d59277404aa8ad6ea33ee21f63.
+2026-03-09T09:49:39.8677642Z Successfully removed non-blocking flag from /podr/container/pipe/beba18dcd17e_suthrarag/stderr_ff5df2d59277404aa8ad6ea33ee21f63.
+2026-03-09T09:49:39.9261992Z Creating container with image: appsvc/node:20-lts_20260115.4.tuxprod from registry: 10.1.0.4:13209 and fully qualified image name: 10.1.0.4:13209/appsvc/node:20-lts_20260115.4.tuxprod
+2026-03-09T09:49:42.0242717Z Starting container: beba18dcd17e_suthrarag.
+2026-03-09T09:49:42.2481823Z Starting watchers and probes.
+2026-03-09T09:49:42.2489357Z Starting metrics collection.
+2026-03-09T09:49:42.2500806Z Container is running.
+2026-03-09T09:49:42.2502216Z State: Starting, Action: CreatingContainer, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Container suthrarag successfully created and is running., DetailsLevel: INFO
+2026-03-09T09:49:42.4520782Z Container start method finished after 7717 ms.
+2026-03-09T09:49:42.4522930Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Container suthrarag successfully created and is running., DetailsLevel: INFO
+2026-03-09T09:49:42.5104218Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-03-09T09:50:54.5201649Z Container has finished running with exit code: 254.
+2026-03-09T09:50:54.5296171Z Container is terminating. Grace period: 5 seconds.
+2026-03-09T09:50:54.5497423Z Stop and delete container. Retry count = 0
+2026-03-09T09:50:54.5503241Z Stopping container: beba18dcd17e_suthrarag.
+2026-03-09T09:50:54.7487205Z Deleting container: beba18dcd17e_suthrarag. Retry count = 0
+2026-03-09T09:50:55.7556182Z Container spec TerminationMessagePolicy  path 
+2026-03-09T09:50:55.8030794Z Container is terminated. Total time elapsed: 1272 ms.
+2026-03-09T09:50:55.8033408Z Site container: suthrarag terminated during site startup.
+2026-03-09T09:50:55.9592562Z State: Stopping, Action: CancellingStartup, LastError: , LastErrorTimestamp: 01/01/0001 00:00:00, LastErrorDetails: , Details: Site container: suthrarag terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-03-09T09:50:56.0207328Z Site startup probe failed after 73.3525574 seconds.
+2026-03-09T09:50:56.5379968Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:50:56, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: suthrarag terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-03-09T09:50:56.5793834Z Failed to start site. Revert by stopping site.
+2026-03-09T09:50:56.5800614Z State: Stopping, Action: StoppingSite, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:50:56, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: suthrarag terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-03-09T09:50:56.6176507Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:50:56, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: suthrarag terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-03-09T09:50:56.6176916Z Site: suthrarag stopped.
+2026-03-09T09:50:56.6374814Z State: Stopping, Action: UnmountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:50:56, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: suthrarag terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-03-09T09:50:58.2174836Z State: Stopping, Action: StoppingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:50:56, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: suthrarag terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-03-09T09:50:58.7908660Z State: Stopped, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:50:56, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 03/09/2026 09:50:58 (UTC), DetailsLevel: ERR
+2026-03-09T09:50:59.2046641Z State: Stopped, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:50:56, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 03/09/2026 09:50:58 (UTC), DetailsLevel: ERR
+2026-03-09T09:51:01.1617717Z State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:50:56, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 03/09/2026 09:50:58 (UTC), DetailsLevel: ERR
+2026-03-09T09:51:06.1469430Z State: Starting, Action: StartingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:50:56, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 03/09/2026 09:50:58 (UTC), DetailsLevel: ERR
+2026-03-09T09:51:06.1657874Z Container start method called.
+2026-03-09T09:51:06.1677814Z State: Starting, Action: PullingImage, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:50:56, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.4:13209/appsvc/node:20-lts_20260115.4.tuxprod for suthrarag., DetailsLevel: INFO
+2026-03-09T09:51:06.1852884Z Establishing network.
+2026-03-09T09:51:06.1863419Z Pulling image: appsvc/node:20-lts_20260115.4.tuxprod.
+2026-03-09T09:51:07.9302363Z Container is starting.
+2026-03-09T09:51:07.9320234Z State: Starting, Action: MountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:50:56, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Mounting volumes for suthrarag., DetailsLevel: INFO
+2026-03-09T09:51:07.9322685Z Establishing user namespace if not established already.
+2026-03-09T09:51:07.9323952Z Establishing network if not established already.
+2026-03-09T09:51:07.9495350Z Mounting volumes.
+2026-03-09T09:51:07.9498323Z Nested mountpoint 
+2026-03-09T09:51:08.1598954Z Nested mountpoint volatile/logs
+2026-03-09T09:51:08.1906254Z Nested mountpoint 
+2026-03-09T09:51:08.2307025Z Nested mountpoint 
+2026-03-09T09:51:08.2780186Z Nested mountpoint 
+2026-03-09T09:51:08.3188620Z Nested mountpoint 
+2026-03-09T09:51:08.4563998Z Nested mountpoint 
+2026-03-09T09:51:11.6914357Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:50:56, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for suthrarag. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-03-09T09:51:11.6991917Z Creating container.
+2026-03-09T09:51:11.7150959Z Creating pipes for streaming container io.
+2026-03-09T09:51:11.7154603Z Creating stdout named pipe at /podr/container/pipe/4121a09862d5_suthrarag/stdout_e6d6be8afefc4f8b8f0f70258c5dd4aa.
+2026-03-09T09:51:11.7312311Z Successfully created stdout named pipe at: /podr/container/pipe/4121a09862d5_suthrarag/stdout_e6d6be8afefc4f8b8f0f70258c5dd4aa.
+2026-03-09T09:51:11.7313574Z Opening named pipe /podr/container/pipe/4121a09862d5_suthrarag/stdout_e6d6be8afefc4f8b8f0f70258c5dd4aa for reading in non-blocking mode.
+2026-03-09T09:51:11.7314725Z Successfully opened named pipe: /podr/container/pipe/4121a09862d5_suthrarag/stdout_e6d6be8afefc4f8b8f0f70258c5dd4aa.
+2026-03-09T09:51:11.7315456Z Successfully removed non-blocking flag from /podr/container/pipe/4121a09862d5_suthrarag/stdout_e6d6be8afefc4f8b8f0f70258c5dd4aa.
+2026-03-09T09:51:11.7316565Z Creating stderr named pipe at /podr/container/pipe/4121a09862d5_suthrarag/stderr_6457f865e645466b982c8498251b1cc5.
+2026-03-09T09:51:11.7317827Z Successfully created stderr named pipe at: /podr/container/pipe/4121a09862d5_suthrarag/stderr_6457f865e645466b982c8498251b1cc5.
+2026-03-09T09:51:11.7318686Z Opening named pipe /podr/container/pipe/4121a09862d5_suthrarag/stderr_6457f865e645466b982c8498251b1cc5 for reading in non-blocking mode.
+2026-03-09T09:51:11.7319597Z Successfully opened named pipe: /podr/container/pipe/4121a09862d5_suthrarag/stderr_6457f865e645466b982c8498251b1cc5.
+2026-03-09T09:51:11.7320268Z Successfully removed non-blocking flag from /podr/container/pipe/4121a09862d5_suthrarag/stderr_6457f865e645466b982c8498251b1cc5.
+2026-03-09T09:51:11.7321138Z Creating container with image: appsvc/node:20-lts_20260115.4.tuxprod from registry: 10.1.0.4:13209 and fully qualified image name: 10.1.0.4:13209/appsvc/node:20-lts_20260115.4.tuxprod
+2026-03-09T09:51:13.8009164Z Starting container: 4121a09862d5_suthrarag.
+2026-03-09T09:51:13.9310214Z Starting watchers and probes.
+2026-03-09T09:51:13.9332538Z Starting metrics collection.
+2026-03-09T09:51:13.9714395Z Container is running.
+2026-03-09T09:51:14.0003285Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:50:56, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container suthrarag successfully created and is running., DetailsLevel: INFO
+2026-03-09T09:51:14.6864432Z Container start method finished after 8518 ms.
+2026-03-09T09:51:14.6953502Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:50:56, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container suthrarag successfully created and is running., DetailsLevel: INFO
+2026-03-09T09:51:14.7055358Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:50:56, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-03-09T09:52:56.1777039Z Container has finished running with exit code: 254.
+2026-03-09T09:52:56.1782887Z Container is terminating. Grace period: 5 seconds.
+2026-03-09T09:52:56.2379387Z Stop and delete container. Retry count = 0
+2026-03-09T09:52:56.2388535Z Stopping container: 4121a09862d5_suthrarag.
+2026-03-09T09:52:56.4386793Z Deleting container: 4121a09862d5_suthrarag. Retry count = 0
+2026-03-09T09:52:57.2630969Z Container spec TerminationMessagePolicy  path 
+2026-03-09T09:52:57.2634013Z Container is terminated. Total time elapsed: 1042 ms.
+2026-03-09T09:52:57.2731954Z Site container: suthrarag terminated during site startup.
+2026-03-09T09:52:57.2830110Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:50:56, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: suthrarag terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-03-09T09:52:57.3323429Z Site startup probe failed after 102.6262557 seconds.
+2026-03-09T09:52:57.6773139Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:52:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: suthrarag terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-03-09T09:52:57.7283225Z Failed to start site. Revert by stopping site.
+2026-03-09T09:52:57.7287540Z State: Stopping, Action: StoppingSite, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:52:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: suthrarag terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-03-09T09:52:57.9086059Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:52:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: suthrarag terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-03-09T09:52:57.9086525Z Site: suthrarag stopped.
+2026-03-09T09:52:57.9274757Z State: Stopping, Action: UnmountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:52:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: suthrarag terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-03-09T09:52:59.2295614Z State: Stopping, Action: StoppingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:52:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: suthrarag terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-03-09T09:53:00.2456114Z Site: suthrarag will be blocked for 1 minutes till 03/09/2026 09:54:00
+2026-03-09T09:53:00.2474181Z State: Blocked, Action: StoppingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:52:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site: suthrarag will be blocked for 1 minutes till 03/09/2026 09:54:00, DetailsLevel: WARN
+2026-03-09T09:53:00.3263045Z State: Stopped, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:52:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 03/09/2026 09:53:00 (UTC), DetailsLevel: WARN
+2026-03-09T09:53:00.8718294Z State: Stopped, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:52:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 03/09/2026 09:53:00 (UTC), DetailsLevel: WARN
+2026-03-09T09:53:06.3623866Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:52:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 03/09/2026 09:54:00, DetailsLevel: WARN
+2026-03-09T09:53:06.3635724Z Start site prohibitted because the site is being blocked.
+2026-03-09T09:53:11.5346738Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:52:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 03/09/2026 09:54:00, DetailsLevel: WARN
+2026-03-09T09:53:11.5347285Z Start site prohibitted because the site is being blocked.
+2026-03-09T09:53:16.7522551Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:52:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 03/09/2026 09:54:00, DetailsLevel: WARN
+2026-03-09T09:53:16.7523209Z Start site prohibitted because the site is being blocked.
+2026-03-09T09:53:22.1556985Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:52:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 03/09/2026 09:54:00, DetailsLevel: WARN
+2026-03-09T09:53:22.1562140Z Start site prohibitted because the site is being blocked.
+2026-03-09T09:53:27.6082487Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:52:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 03/09/2026 09:54:00, DetailsLevel: WARN
+2026-03-09T09:53:27.6082814Z Start site prohibitted because the site is being blocked.
+2026-03-09T09:53:32.8162919Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:52:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 03/09/2026 09:54:00, DetailsLevel: WARN
+2026-03-09T09:53:32.8163991Z Start site prohibitted because the site is being blocked.
+2026-03-09T09:53:37.9131462Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:52:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 03/09/2026 09:54:00, DetailsLevel: WARN
+2026-03-09T09:53:37.9132004Z Start site prohibitted because the site is being blocked.
+2026-03-09T09:53:43.0663574Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:52:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 03/09/2026 09:54:00, DetailsLevel: WARN
+2026-03-09T09:53:43.0663911Z Start site prohibitted because the site is being blocked.
+2026-03-09T09:53:48.2124938Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:52:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 03/09/2026 09:54:00, DetailsLevel: WARN
+2026-03-09T09:53:48.2125482Z Start site prohibitted because the site is being blocked.
+2026-03-09T09:53:53.4403830Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:52:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 03/09/2026 09:54:00, DetailsLevel: WARN
+2026-03-09T09:53:53.4404378Z Start site prohibitted because the site is being blocked.
+2026-03-09T09:53:58.5566470Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:52:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 03/09/2026 09:54:00, DetailsLevel: WARN
+2026-03-09T09:53:58.5566788Z Start site prohibitted because the site is being blocked.
+2026-03-09T09:54:00.2111763Z Site: suthrarag is unblocked.
+2026-03-09T09:54:03.7658645Z State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:52:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 03/09/2026 09:54:00, DetailsLevel: WARN
+2026-03-09T09:54:08.5274551Z State: Starting, Action: StartingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:52:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 03/09/2026 09:54:00, DetailsLevel: WARN
+2026-03-09T09:54:08.5575860Z Container start method called.
+2026-03-09T09:54:08.6263506Z State: Starting, Action: PullingImage, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:52:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.4:13209/appsvc/node:20-lts_20260115.4.tuxprod for suthrarag., DetailsLevel: INFO
+2026-03-09T09:54:08.6265978Z Establishing network.
+2026-03-09T09:54:08.6460572Z Pulling image: appsvc/node:20-lts_20260115.4.tuxprod.
+2026-03-09T09:54:09.5154943Z Container is starting.
+2026-03-09T09:54:09.5157080Z State: Starting, Action: MountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:52:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Mounting volumes for suthrarag., DetailsLevel: INFO
+2026-03-09T09:54:09.5159826Z Establishing user namespace if not established already.
+2026-03-09T09:54:09.5161185Z Establishing network if not established already.
+2026-03-09T09:54:09.5170798Z Mounting volumes.
+2026-03-09T09:54:09.5938887Z Nested mountpoint 
+2026-03-09T09:54:09.7332745Z Nested mountpoint volatile/logs
+2026-03-09T09:54:09.8018646Z Nested mountpoint 
+2026-03-09T09:54:09.8605789Z Nested mountpoint 
+2026-03-09T09:54:09.8616905Z Nested mountpoint 
+2026-03-09T09:54:09.9882662Z Nested mountpoint 
+2026-03-09T09:54:10.2260415Z Nested mountpoint 
+2026-03-09T09:54:12.0565187Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:52:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for suthrarag. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-03-09T09:54:12.0567278Z Creating container.
+2026-03-09T09:54:12.0843294Z Creating pipes for streaming container io.
+2026-03-09T09:54:12.1138216Z Creating stdout named pipe at /podr/container/pipe/c16452483b3c_suthrarag/stdout_c49f7584e23149578493de6b40919225.
+2026-03-09T09:54:12.1163480Z Successfully created stdout named pipe at: /podr/container/pipe/c16452483b3c_suthrarag/stdout_c49f7584e23149578493de6b40919225.
+2026-03-09T09:54:12.1164769Z Opening named pipe /podr/container/pipe/c16452483b3c_suthrarag/stdout_c49f7584e23149578493de6b40919225 for reading in non-blocking mode.
+2026-03-09T09:54:12.1166025Z Successfully opened named pipe: /podr/container/pipe/c16452483b3c_suthrarag/stdout_c49f7584e23149578493de6b40919225.
+2026-03-09T09:54:12.1240486Z Successfully removed non-blocking flag from /podr/container/pipe/c16452483b3c_suthrarag/stdout_c49f7584e23149578493de6b40919225.
+2026-03-09T09:54:12.2048209Z Creating stderr named pipe at /podr/container/pipe/c16452483b3c_suthrarag/stderr_8143fb5a90e747f6bd59365be1d10c3d.
+2026-03-09T09:54:12.2050311Z Successfully created stderr named pipe at: /podr/container/pipe/c16452483b3c_suthrarag/stderr_8143fb5a90e747f6bd59365be1d10c3d.
+2026-03-09T09:54:12.2051224Z Opening named pipe /podr/container/pipe/c16452483b3c_suthrarag/stderr_8143fb5a90e747f6bd59365be1d10c3d for reading in non-blocking mode.
+2026-03-09T09:54:12.2052137Z Successfully opened named pipe: /podr/container/pipe/c16452483b3c_suthrarag/stderr_8143fb5a90e747f6bd59365be1d10c3d.
+2026-03-09T09:54:12.2052894Z Successfully removed non-blocking flag from /podr/container/pipe/c16452483b3c_suthrarag/stderr_8143fb5a90e747f6bd59365be1d10c3d.
+2026-03-09T09:54:12.2060552Z Creating container with image: appsvc/node:20-lts_20260115.4.tuxprod from registry: 10.1.0.4:13209 and fully qualified image name: 10.1.0.4:13209/appsvc/node:20-lts_20260115.4.tuxprod
+2026-03-09T09:54:14.4925131Z Starting container: c16452483b3c_suthrarag.
+2026-03-09T09:54:14.8160140Z Starting watchers and probes.
+2026-03-09T09:54:14.8553416Z Starting metrics collection.
+2026-03-09T09:54:14.8556457Z Container is running.
+2026-03-09T09:54:14.8557204Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:52:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container suthrarag successfully created and is running., DetailsLevel: INFO
+2026-03-09T09:54:15.7123391Z Container start method finished after 7154 ms.
+2026-03-09T09:54:15.7125458Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:52:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container suthrarag successfully created and is running., DetailsLevel: INFO
+2026-03-09T09:54:15.7125748Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:52:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-03-09T09:55:18.2913731Z Container has finished running with exit code: 254.
+2026-03-09T09:55:18.2932290Z Container is terminating. Grace period: 5 seconds.
+2026-03-09T09:55:18.3218337Z Stop and delete container. Retry count = 0
+2026-03-09T09:55:18.3225848Z Stopping container: c16452483b3c_suthrarag.
+2026-03-09T09:55:18.4604752Z Deleting container: c16452483b3c_suthrarag. Retry count = 0
+2026-03-09T09:55:19.2044080Z Container spec TerminationMessagePolicy  path 
+2026-03-09T09:55:19.2256827Z Container is terminated. Total time elapsed: 911 ms.
+2026-03-09T09:55:19.2447103Z Site container: suthrarag terminated during site startup.
+2026-03-09T09:55:19.2747489Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:52:57, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: suthrarag terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-03-09T09:55:19.3353575Z Site startup probe failed after 63.4730843 seconds.
+2026-03-09T09:55:19.7271539Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:55:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: suthrarag terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-03-09T09:55:19.7571975Z Failed to start site. Revert by stopping site.
+2026-03-09T09:55:19.7575482Z State: Stopping, Action: StoppingSite, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:55:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: suthrarag terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-03-09T09:55:19.7582870Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:55:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: suthrarag terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-03-09T09:55:19.7583041Z Site: suthrarag stopped.
+2026-03-09T09:55:19.8080636Z State: Stopping, Action: UnmountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:55:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: suthrarag terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-03-09T09:55:20.8439418Z State: Stopping, Action: StoppingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:55:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: suthrarag terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-03-09T09:55:21.5980481Z Site: suthrarag will be blocked for 1 minutes till 03/09/2026 09:56:21
+2026-03-09T09:55:21.5981882Z State: Blocked, Action: StoppingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:55:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site: suthrarag will be blocked for 1 minutes till 03/09/2026 09:56:21, DetailsLevel: WARN
+2026-03-09T09:55:21.5984281Z State: Stopped, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:55:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 03/09/2026 09:55:21 (UTC), DetailsLevel: WARN
+2026-03-09T09:55:22.3756642Z State: Stopped, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:55:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site stopped at 03/09/2026 09:55:21 (UTC), DetailsLevel: WARN
+2026-03-09T09:55:28.0774368Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:55:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 03/09/2026 09:56:21, DetailsLevel: WARN
+2026-03-09T09:55:28.0867058Z Start site prohibitted because the site is being blocked.
+2026-03-09T09:55:33.2569853Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:55:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 03/09/2026 09:56:21, DetailsLevel: WARN
+2026-03-09T09:55:33.2571673Z Start site prohibitted because the site is being blocked.
+2026-03-09T09:55:38.4692769Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:55:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 03/09/2026 09:56:21, DetailsLevel: WARN
+2026-03-09T09:55:38.4693357Z Start site prohibitted because the site is being blocked.
+2026-03-09T09:55:43.6523742Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:55:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 03/09/2026 09:56:21, DetailsLevel: WARN
+2026-03-09T09:55:43.6524281Z Start site prohibitted because the site is being blocked.
+2026-03-09T09:55:48.9028327Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:55:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 03/09/2026 09:56:21, DetailsLevel: WARN
+2026-03-09T09:55:48.9028664Z Start site prohibitted because the site is being blocked.
+2026-03-09T09:55:54.1288139Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:55:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 03/09/2026 09:56:21, DetailsLevel: WARN
+2026-03-09T09:55:54.1288808Z Start site prohibitted because the site is being blocked.
+2026-03-09T09:55:59.6100949Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:55:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 03/09/2026 09:56:21, DetailsLevel: WARN
+2026-03-09T09:55:59.6102349Z Start site prohibitted because the site is being blocked.
+2026-03-09T09:56:04.7779579Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:55:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 03/09/2026 09:56:21, DetailsLevel: WARN
+2026-03-09T09:56:04.7779906Z Start site prohibitted because the site is being blocked.
+2026-03-09T09:56:10.0925454Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:55:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 03/09/2026 09:56:21, DetailsLevel: WARN
+2026-03-09T09:56:10.0927312Z Start site prohibitted because the site is being blocked.
+2026-03-09T09:56:15.4167769Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:55:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 03/09/2026 09:56:21, DetailsLevel: WARN
+2026-03-09T09:56:15.4168325Z Start site prohibitted because the site is being blocked.
+2026-03-09T09:56:20.5040561Z State: Blocked, Action: None, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:55:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 03/09/2026 09:56:21, DetailsLevel: WARN
+2026-03-09T09:56:20.5041156Z Start site prohibitted because the site is being blocked.
+2026-03-09T09:56:21.5983686Z Site: suthrarag is unblocked.
+2026-03-09T09:56:25.6182565Z State: Starting, Action: EstablishingSiteNetworks, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:55:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 03/09/2026 09:56:21, DetailsLevel: WARN
+2026-03-09T09:56:27.7092967Z State: Starting, Action: StartingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:55:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site is blocked due to multiple, consecutive cold start failures. Site scheduled to be unblocked at 03/09/2026 09:56:21, DetailsLevel: WARN
+2026-03-09T09:56:27.7154391Z Container start method called.
+2026-03-09T09:56:27.7159450Z State: Starting, Action: PullingImage, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:55:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pulling image 10.1.0.4:13209/appsvc/node:20-lts_20260115.4.tuxprod for suthrarag., DetailsLevel: INFO
+2026-03-09T09:56:27.7161349Z Establishing network.
+2026-03-09T09:56:27.7169705Z Pulling image: appsvc/node:20-lts_20260115.4.tuxprod.
+2026-03-09T09:56:28.1258493Z Container is starting.
+2026-03-09T09:56:28.1259647Z State: Starting, Action: MountingVolumes, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:55:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Mounting volumes for suthrarag., DetailsLevel: INFO
+2026-03-09T09:56:28.1260898Z Establishing user namespace if not established already.
+2026-03-09T09:56:28.1262009Z Establishing network if not established already.
+2026-03-09T09:56:28.1263399Z Mounting volumes.
+2026-03-09T09:56:28.1268937Z Nested mountpoint 
+2026-03-09T09:56:28.2465545Z Nested mountpoint volatile/logs
+2026-03-09T09:56:28.3165742Z Nested mountpoint 
+2026-03-09T09:56:28.3177694Z Nested mountpoint 
+2026-03-09T09:56:28.3182218Z Nested mountpoint 
+2026-03-09T09:56:28.3564563Z Nested mountpoint 
+2026-03-09T09:56:28.4072258Z Nested mountpoint 
+2026-03-09T09:56:29.9164231Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:55:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Finished pulling container image and mounting volumes for suthrarag. Allocatinng the rest of the container resources to finish container creation., DetailsLevel: INFO
+2026-03-09T09:56:29.9165801Z Creating container.
+2026-03-09T09:56:29.9167017Z Creating pipes for streaming container io.
+2026-03-09T09:56:29.9168081Z Creating stdout named pipe at /podr/container/pipe/0ce72accb5b2_suthrarag/stdout_ffaa7c3eb4ee4c3fbe605246acd2941d.
+2026-03-09T09:56:29.9358540Z Successfully created stdout named pipe at: /podr/container/pipe/0ce72accb5b2_suthrarag/stdout_ffaa7c3eb4ee4c3fbe605246acd2941d.
+2026-03-09T09:56:29.9361292Z Opening named pipe /podr/container/pipe/0ce72accb5b2_suthrarag/stdout_ffaa7c3eb4ee4c3fbe605246acd2941d for reading in non-blocking mode.
+2026-03-09T09:56:29.9362753Z Successfully opened named pipe: /podr/container/pipe/0ce72accb5b2_suthrarag/stdout_ffaa7c3eb4ee4c3fbe605246acd2941d.
+2026-03-09T09:56:29.9363777Z Successfully removed non-blocking flag from /podr/container/pipe/0ce72accb5b2_suthrarag/stdout_ffaa7c3eb4ee4c3fbe605246acd2941d.
+2026-03-09T09:56:29.9762727Z Creating stderr named pipe at /podr/container/pipe/0ce72accb5b2_suthrarag/stderr_098dcfe17e2e4507a852814d55f3d554.
+2026-03-09T09:56:29.9766640Z Successfully created stderr named pipe at: /podr/container/pipe/0ce72accb5b2_suthrarag/stderr_098dcfe17e2e4507a852814d55f3d554.
+2026-03-09T09:56:29.9768723Z Opening named pipe /podr/container/pipe/0ce72accb5b2_suthrarag/stderr_098dcfe17e2e4507a852814d55f3d554 for reading in non-blocking mode.
+2026-03-09T09:56:29.9770112Z Successfully opened named pipe: /podr/container/pipe/0ce72accb5b2_suthrarag/stderr_098dcfe17e2e4507a852814d55f3d554.
+2026-03-09T09:56:29.9771133Z Successfully removed non-blocking flag from /podr/container/pipe/0ce72accb5b2_suthrarag/stderr_098dcfe17e2e4507a852814d55f3d554.
+2026-03-09T09:56:29.9772800Z Creating container with image: appsvc/node:20-lts_20260115.4.tuxprod from registry: 10.1.0.4:13209 and fully qualified image name: 10.1.0.4:13209/appsvc/node:20-lts_20260115.4.tuxprod
+2026-03-09T09:56:31.1318418Z Starting container: 0ce72accb5b2_suthrarag.
+2026-03-09T09:56:31.3507237Z Starting watchers and probes.
+2026-03-09T09:56:31.3611039Z Starting metrics collection.
+2026-03-09T09:56:31.3699062Z Container is running.
+2026-03-09T09:56:31.3782982Z State: Starting, Action: CreatingContainer, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:55:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container suthrarag successfully created and is running., DetailsLevel: INFO
+2026-03-09T09:56:31.6225234Z Container start method finished after 3895 ms.
+2026-03-09T09:56:31.6228656Z State: Starting, Action: InitiatingSiteWarmUpProbe, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:55:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Container suthrarag successfully created and is running., DetailsLevel: INFO
+2026-03-09T09:56:31.6228865Z State: Starting, Action: WaitingForSiteWarmUpProbeSuccess, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:55:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Pinging warmup path to ensure container is ready to receive requests., DetailsLevel: INFO
+2026-03-09T09:58:16.8436903Z Container has finished running with exit code: 127.
+2026-03-09T09:58:16.8445553Z Container is terminating. Grace period: 5 seconds.
+2026-03-09T09:58:16.8545341Z Stop and delete container. Retry count = 0
+2026-03-09T09:58:16.8546309Z Stopping container: 0ce72accb5b2_suthrarag.
+2026-03-09T09:58:17.0218984Z Deleting container: 0ce72accb5b2_suthrarag. Retry count = 0
+2026-03-09T09:58:19.3419260Z Container spec TerminationMessagePolicy  path 
+2026-03-09T09:58:19.3650362Z Container is terminated. Total time elapsed: 2518 ms.
+2026-03-09T09:58:19.3709575Z Site container: suthrarag terminated during site startup.
+2026-03-09T09:58:19.3916040Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:55:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: suthrarag terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-03-09T09:58:19.4126895Z Site startup probe failed after 107.741612 seconds.
+2026-03-09T09:58:19.8199423Z State: Stopping, Action: CancellingStartup, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:58:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: suthrarag terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-03-09T09:58:19.8611500Z Failed to start site. Revert by stopping site.
+2026-03-09T09:58:19.8681657Z State: Stopping, Action: StoppingSite, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:58:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: suthrarag terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-03-09T09:58:19.8705463Z State: Stopping, Action: StoppingSiteContainers, LastError: ContainerTimeout, LastErrorTimestamp: 03/09/2026 09:58:19, LastErrorDetails: Container did not start within expected time limit of 230s. Please inspect your container logs for more details., Details: Site container: suthrarag terminated during site startup. Cancelling site startup., DetailsLevel: ERR
+2026-03-09T09:58:19.8705753Z Site: suthrarag stopped.
