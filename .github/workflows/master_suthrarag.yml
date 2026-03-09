@@ -27,8 +27,12 @@ jobs:
         run: |
           npm install
           npm run build
-          mkdir -p .next/standalone/public
-          cp -r public/* .next/standalone/public/
+          # Copy public folder if it exists
+          if [ -d public ]; then
+            mkdir -p .next/standalone/public
+            cp -r public/* .next/standalone/public/
+          fi
+          # Copy static assets into standalone bundle
           mkdir -p .next/standalone/.next/static
           cp -r .next/static/* .next/standalone/.next/static/
 
