@@ -23,18 +23,20 @@ jobs:
         with:
           node-version: '20.x'
 
-      - name: Stage files for deployment
+      - name: Create deployment zip
         run: |
-          # Create a clean release directory
-          mkdir -p release
-          # Copy everything except node_modules, .git, .next, etc.
-          rsync -a --exclude 'node_modules' --exclude '.git' --exclude '.next' --exclude 'webapp_logs*' --exclude 'release' --exclude 'tmp_deploy' ./ release/
+          mkdir -p staging
+          cp -r ./* staging/
+          cd staging
+          rm -rf node_modules .next webapp_logs* *.zip tmp_deploy .git
+          zip -r ../deploy.zip .
+          cd ..
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          path: release/
+          path: deploy.zip
 
   deploy:
     runs-on: ubuntu-latest
@@ -48,7 +50,6 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: node-app
-          path: .
 
       - name: Login to Azure
         uses: azure/login@v2
@@ -63,4 +64,4 @@ jobs:
         with:
           app-name: 'suthrarag'
           slot-name: 'Production'
-          package: .
+          package: deploy.zip
